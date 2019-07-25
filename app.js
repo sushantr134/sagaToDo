@@ -27,6 +27,10 @@ const PORT = process.env.SERVER_PORT || 8000;
 
 const opts = {
   port: 4000,
+  cors: {
+    credentials: true,
+    origin: ["*"] // your frontend url.
+  },
   endpoint: "/graphql"
 };
 

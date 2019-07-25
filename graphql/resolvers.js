@@ -1,5 +1,4 @@
 const User = require("../models/user");
-
 const data = [
   {
     id: "161b301",
