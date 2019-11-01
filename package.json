@@ -30,7 +30,7 @@
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "sequelize": "^5.10.3"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
