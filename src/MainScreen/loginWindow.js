@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
+
 const LoginPanel = props => {
   const [panelState, setPanelState] = useState({
     userName: localStorage.getItem("savedUserName"),
@@ -20,7 +22,7 @@ const LoginPanel = props => {
   return (
     <div>
       <h1>User Login Panel</h1>
-      <form onSubmit={event => props.onSubmitForm(panelState)}>
+      <form onSubmit={event => props.onSubmitForm(panelState, props.history)}>
         <div>
           <label>Username:</label>
           <input
@@ -53,4 +55,4 @@ const LoginPanel = props => {
   );
 };
 
-export default LoginPanel;
+export default withRouter(LoginPanel);

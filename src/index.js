@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
 if (module.hot) {
   module.hot.accept();
 }
@@ -10,5 +11,11 @@ if (module.hot) {
 localStorage.setItem("user1", "pass@123");
 localStorage.setItem("user2", "pass@123");
 localStorage.setItem("user3", "pass@123");
+const history = createBrowserHistory();
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Router history={history}>
+    <App />
+  </Router>,
+  document.getElementById("root")
+);
