@@ -1,14 +1,16 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import ViewWindowPanel from "./listViewWindow";
+import TaskItem from "./taskItem";
 
 import styles from "./styles.scss";
 
-const ToDoContainer = props => {
+const ToDoContainer = ({ taskState, listViewState, dispatch, handleChange, handleListView, handleSave, inputTask }) => {
   return (
     <div className={styles.todoContainer}>
       <ol>
-        {tasks.tasksAdded.length > 0 &&
-          tasks.tasksAdded.map((taskObj, i) => (
+        {taskState.length > 0 &&
+          taskState.map((taskObj, i) => (
             <TaskItem
               key={i}
               handleChange={handleChange}
@@ -22,7 +24,7 @@ const ToDoContainer = props => {
       <input type='text' name='taskName' placeholder='Enter Task Name' defaultValue={""} onChange={handleChange} />
       <button onClick={() => dispatch({ type: "ADD_TASK", payload: inputTask })}>+ Add Task</button>
       <button onClick={handleListView}>{!listViewState.listView ? "View list" : "close list"}</button>
-      {listViewState.listView && <ViewWindowPanel taskState={tasks.tasksAdded} />}
+      {listViewState.listView && <ViewWindowPanel taskState={taskState} />}
     </div>
   );
 };
