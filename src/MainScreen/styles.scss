@@ -8,7 +8,8 @@
   align-items: center;
   margin: 0 auto;
   padding: 1em;
-
+  height: 100vh;
+  background: #03a9f4;
   form {
     padding: 2%;
     width: 35vw;
@@ -16,6 +17,8 @@
     border: 1px solid #131b85;
     border-radius: 1em;
     margin-top: 1%;
+    background: whitesmoke;
+    box-shadow: 7px 9px 8px 0px #040d31;
     input {
       margin: 0.8em 0 0.8em 0;
       padding: 2%;
@@ -45,10 +48,30 @@
 
 .dashboardContainer {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-height: max-content;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.4em;
+  background: #79bbda;
+  padding: 5%;
   justify-items: center;
+}
+
+.btnLogout {
+  width: 80px;
+  background: #a1080f;
+  border-radius: 0.2em;
+  border: none;
+  color: white;
+  padding: 1%;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 0.3em 0 0.3em;
+  position: fixed;
+  top: 2%;
+  left: 2%;
 }
 
 .taskText {

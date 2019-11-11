@@ -74,11 +74,10 @@ const Dashboard = props => {
   };
   return (
     <TaskContext.Provider value={tasks}>
-      {console.log(tasks)}
-      <button className={styles.buttonDefault} onClick={event => props.handleLogout(props.history)}>
-        Logout
-      </button>
       <section className={styles.dashboardContainer}>
+        <button className={styles.btnLogout} onClick={event => props.handleLogout(props.history)}>
+          Logout
+        </button>
         <ToDoContainer
           inputTask={inputTask}
           dispatch={dispatch}
