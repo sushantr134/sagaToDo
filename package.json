@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel serve ./src/index.html",
-    "start": "nodemon app.js",
+    "start": "parcel serve ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
   "dependencies": {
@@ -25,7 +24,6 @@
     "history": "^4.10.1",
     "local-storage": "^2.0.0",
     "morgan": "^1.9.1",
-    "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",

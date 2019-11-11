@@ -52,7 +52,7 @@ const Dashboard = props => {
     event.preventDefault();
     const Task = {
       taskName: event.target.value,
-      description: ""
+      description: "a small description about task ..."
     };
     setInputTask({ ...Task });
   };
