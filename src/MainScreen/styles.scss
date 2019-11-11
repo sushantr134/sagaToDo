@@ -1,0 +1,84 @@
+@import "../app.global.scss";
+
+.dashboardContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.taskText {
+  color: white !important;
+  background: #5712a7;
+  font-size: 14px;
+  padding: 0.18em;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.todoContainer {
+  width: 80%;
+  height: 50vh;
+  max-height: 450px;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  border-radius: 0.45em;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: #f7f7f7;
+
+  ol {
+    padding: 1em;
+    width: 100%;
+    li {
+      margin: 0.3em 0 0.3em 0;
+      b {
+        color: #414141;
+      }
+      input {
+        width: 70%;
+        padding: 1%;
+        border-radius: 0.4em;
+      }
+
+      .btnEdit {
+        width: 50px;
+        background: #020202;
+        border-radius: 0.2em;
+        border: none;
+        color: white;
+        padding: 1%;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 0.3em 0 0.3em;
+      }
+      .btnRemove {
+        width: 70px;
+        background: #f51818;
+        border-radius: 0.2em;
+        border: none;
+        padding: 1%;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 0.3em 0 0.3em;
+      }
+    }
+  }
+  input {
+    width: 70%;
+    padding: 1%;
+    border-radius: 0.4em;
+  }
+  button {
+    width: 150px;
+    background: lightblue;
+    border-radius: 0.4em;
+    border: none;
+    padding: 1%;
+    margin: 0.3em 0 0.3em 0;
+  }
+}
