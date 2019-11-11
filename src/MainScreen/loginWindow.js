@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
+import styles from "./styles.scss";
 
 const LoginPanel = props => {
   const [panelState, setPanelState] = useState({
@@ -20,11 +21,12 @@ const LoginPanel = props => {
     }
   };
   return (
-    <div>
+    <section className={styles.userLoginPanel}>
       <h1>User Login Panel</h1>
       <form onSubmit={event => props.onSubmitForm(panelState, props.history)}>
         <div>
           <label>Username:</label>
+          <br />
           <input
             type='text'
             name='username'
@@ -35,6 +37,7 @@ const LoginPanel = props => {
         </div>
         <div>
           <label>Password:</label>
+          <br />
           <input
             type='password'
             name='password'
@@ -47,11 +50,11 @@ const LoginPanel = props => {
           <input type='checkbox' name='rememberMe' checked={panelState.isChecked} onChange={() => handleChange(null, "rememberMe")}></input>
           <label>Remember Me</label>
         </div>
-        <button type='submit' name='loginBtn'>
+        <button className={styles.btnLogin} type='submit' name='loginBtn'>
           Login
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

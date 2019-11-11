@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import ToDoContainer from "./ToDoContainer";
+import DoneContainer from "./DoneContainer";
 import styles from "./styles.scss";
 
 const TaskContext = React.createContext({});
@@ -67,13 +68,16 @@ const Dashboard = props => {
     setListView({ ...listViewState, listView: !listViewState.listView });
   };
 
+  const markTaskDone = taskObj => {
+    event.preventDefault();
+    return dispatch({ type: "TASK_DONE", payload: taskObj }), dispatch({ type: "REMOVE_TASK", payload: taskObj });
+  };
   return (
     <TaskContext.Provider value={tasks}>
       {console.log(tasks)}
       <button className={styles.buttonDefault} onClick={event => props.handleLogout(props.history)}>
         Logout
       </button>
-      <h1>Welcome to ToDo's App</h1>
       <section className={styles.dashboardContainer}>
         <ToDoContainer
           inputTask={inputTask}
@@ -82,9 +86,10 @@ const Dashboard = props => {
           handleListView={handleListView}
           handleChange={handleChange}
           handleSave={handleSave}
+          markTaskDone={markTaskDone}
           listViewState={listViewState}
         />
-        <div className={styles.doneContainer}></div>
+        <DoneContainer tasksDone={tasks.tasksDone} />
       </section>
     </TaskContext.Provider>
   );

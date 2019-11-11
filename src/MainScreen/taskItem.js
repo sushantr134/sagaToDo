@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 
 import styles from "./styles.scss";
 
-const TaskItem = ({ handleChange, taskObj, inputTask, handleRemoveTask, handleSave }) => {
+const TaskItem = ({ handleChange, taskObj, inputTask, handleRemoveTask, handleSave, markTaskDone }) => {
   const [toggleEditState, setEditOption] = useState({ isEdit: false });
 
   const handleEdit = () => {
@@ -33,6 +33,9 @@ const TaskItem = ({ handleChange, taskObj, inputTask, handleRemoveTask, handleSa
         </button>
         <button className={styles.btnRemove} title='delete your task' onClick={event => handleRemoveTask()}>
           x Remove
+        </button>
+        <button className={styles.btnDone} title='Click to mark this task Done' onClick={() => markTaskDone(taskObj)}>
+          Mark Done
         </button>
       </li>
     </>
