@@ -1,21 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import { Router } from "react-router-dom";
-import { createBrowserHistory } from "history";
-if (module.hot) {
-  module.hot.accept();
-}
 
-//save login users
-localStorage.setItem("user1", "pass@123");
-localStorage.setItem("user2", "pass@123");
-localStorage.setItem("user3", "pass@123");
-const history = createBrowserHistory();
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Provider } from "react-redux";
+import Store from "./redux/Store";
+
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  <Router history={history}>
+  <Provider store={Store}>
     <App />
-  </Router>,
-  document.getElementById("root")
+  </Provider>,
+  rootElement
 );

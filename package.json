@@ -1,43 +1,36 @@
 {
-  "name": "mvc",
+  "name": "react",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
-  },
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "apollo-boost": "^0.4.3",
-    "babel-loader": "^8.0.6",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "graphql-tag": "^2.10.1",
-    "graphql-yoga": "^1.18.1",
-    "helmet": "^3.20.0",
-    "history": "^4.10.1",
-    "local-storage": "^2.0.0",
-    "morgan": "^1.9.1",
-    "mysql2": "^1.6.5",
-    "nodemon": "^1.19.1",
-    "react": "^16.8.6",
-    "react-apollo": "^2.5.8",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "sequelize": "^5.15.1"
+    "bootstrap": "4.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.1",
+    "react-scripts": "3.4.3",
+    "reactstrap": "8.5.1",
+    "redux": "4.0.5",
+    "redux-logger": "3.0.6",
+    "redux-saga": "1.1.3"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.3",
-    "postcss-modules": "^1.4.1",
-    "react-hot-loader": "^4.12.9",
-    "sass": "^1.22.7"
-  }
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
